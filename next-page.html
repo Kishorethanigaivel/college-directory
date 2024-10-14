@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Details</title>
+    <style>
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(page27.jpg); /* Add your background image path here */
+    background-size: cover; /* Ensure the image covers the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Make sure the background image stays fixed when scrolling */
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.457); /* Semi-transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #457b9d;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #25354a;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Submitted Record Details</h1>
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Role:</strong> <span id="role"></span></p>
+        <!-- Redirect back to Administrator Dashboard -->
+        <button onclick="window.location.href='administrator-dashboard.html'">Back to Dashboard</button>
+    </div>
+
+    <script>
+        // Retrieve data from sessionStorage
+        document.getElementById('name').innerText = sessionStorage.getItem('recordName');
+        document.getElementById('email').innerText = sessionStorage.getItem('recordEmail');
+        document.getElementById('role').innerText = sessionStorage.getItem('recordRole');
+    </script>
+</body>
+
+</html>
